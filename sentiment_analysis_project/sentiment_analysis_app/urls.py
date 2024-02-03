@@ -1,0 +1,1 @@
+from django.urls import pathfrom .views import analyze_sentiment_apiurlpatterns = [    path('api/analyze-sentiment/', analyze_sentiment_api, name='analyze_sentiment_api'),]
