@@ -1,1 +1,1 @@
-from django.urls import pathfrom .views import analyze_sentiment_apiurlpatterns = [    path('api/analyze-sentiment/', analyze_sentiment_api, name='analyze_sentiment_api'),]
+from django.urls import pathfrom .views import analyze_sentiment_apifrom .views import LoginView, RegistrationViewurlpatterns = [    path('api/analyze-sentiment/', analyze_sentiment_api, name='analyze_sentiment_api'),    path('api/login/', LoginView.as_view(), name='login'),    path('api/registration/', RegistrationView.as_view(), name='registration'),]
